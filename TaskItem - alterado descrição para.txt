@@ -1,0 +1,2 @@
+TaskItem -> alterado descrição para Descricao
+Adcionado relacionamento com usuário e categoria

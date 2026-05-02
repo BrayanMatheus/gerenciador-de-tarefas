@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:5028
+
+### Criar usuário
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Victor Silva",
+  "email": "victor@email.com"
+}
+
+### Listar usuários
+GET {{baseUrl}}/usuarios
+
+### Criar categoria
+POST {{baseUrl}}/categorias
+Content-Type: application/json
+
+{
+  "nome": "Estudos"
+}
+
+### Listar categorias
+GET {{baseUrl}}/categorias
