@@ -91,7 +91,7 @@ O projeto está disponível no GitHub para avaliação:
 
 ## 🤖 Uso de IA
 
-**Ferramenta utilizada:** ChatGPT  
+**Ferramenta utilizada:** ChatGPT, Claude (Anthropic)
 
 **Forma de uso:**  
 A ferramenta foi utilizada para auxiliar na elaboração da documentação do projeto, incluindo a estruturação do README, organização das funcionalidades e geração dos textos descritivos.
