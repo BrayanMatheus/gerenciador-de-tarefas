@@ -1,5 +1,6 @@
 using API.Data;
 using API.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 // FEITO ATÉ AGORA
@@ -19,10 +20,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDataContext>();
 var app = builder.Build();
 
-// Teste para ver se está conectado com o banco
-app.MapGet("/usuarios", (AppDataContext db) =>
+// POST: /api/tarefa/cadastrar
+app.MapPost("/api/tarefa/cadastrar", ([FromBody] TaskItem tarefa, [FromServices] AppDataContext ctx) =>
 {
-    return db.Usuario.ToList();
+    tarefa.CriadoEm = DateTime.Now;
+    ctx.TaskItem.Add(tarefa);
+    ctx.SaveChanges();
+    return Results.Created($"/api/tarefa/{tarefa.Id}", tarefa);
 });
 
 app.Run();
+
