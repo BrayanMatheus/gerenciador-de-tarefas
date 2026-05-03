@@ -1,5 +1,8 @@
 @baseUrl = http://localhost:5028
 
+### Raiz da API
+GET {{baseUrl}}/api
+
 # -------- USUÁRIO ---------
 
 ### Criar usuário
@@ -51,8 +54,43 @@ PUT {{baseUrl}}/api/categorias/atualizar/{id}
 Content-Type: application/json
 
 {
-  "nome": "categoria atualizada"
+  "nome": "Urgência"
 }
 
 ### Remover categoria
 DELETE {{baseUrl}}/api/categorias/remover/{id}
+
+# -------- TAREFAS ---------
+
+### Cadastrar Tarefas
+POST {{baseUrl}}/api/tarefas/cadastrar
+Content-Type: application/json
+
+{
+  "titulo": "Fazer exames",
+  "descricao": "Realizar exames médicos",
+  "concluida": true,
+  "usuarioId": 2,
+  "categoriaId": 5
+}
+
+### Listar todas as tarefas
+GET {{baseUrl}}/api/tarefas/listar
+
+### Listar tarefa por ID
+GET  {{baseUrl}}/api/tarefas/{id}
+
+### Atualizar tarefa por ID
+PUT {{baseUrl}}/api/tarefas/atualizar/{id}
+Content-Type: application/json
+
+{
+  "titulo": "Fazer exames",
+  "descricao": "Realizar exames médicos",
+  "concluida": true,
+  "usuarioId": 5,
+  "categoriaId": 5
+}
+
+### Deletar tarefa
+DELETE {{baseUrl}}/api/tarefas/remover/{id}
