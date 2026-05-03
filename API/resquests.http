@@ -1,0 +1,58 @@
+@baseUrl = http://localhost:5028
+
+# -------- USUÁRIO ---------
+
+### Criar usuário
+POST {{baseUrl}}/api/usuarios/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Brayan Matheus",
+  "email": "brayan@email.com"
+}
+
+### Listar todos os usuários
+GET {{baseUrl}}/api/usuarios/listar
+
+### Listar usuário por ID
+GET {{baseUrl}}/api/usuarios/4
+
+### Atualizar usuário por id
+PUT {{baseUrl}}/api/usuarios/atualizar/4
+Content-Type: application/json
+
+{
+  "nome": "Brayan Atualizado",
+  "email": "brayannovo@email.com"
+}
+
+### Remover usuário
+DELETE {{baseUrl}}/api/usuarios/remover/{id}
+
+
+# -------- CATEGORIA ---------
+
+### Criar categoria
+POST {{baseUrl}}/api/categorias/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Conferir estoques de lojas"
+}
+
+### Listar todas as categorias
+GET {{baseUrl}}/api/categorias/listar
+
+### Listar categoria por ID
+GET {{baseUrl}}/api/categorias/{id}
+
+### Atualizar categoria por ID
+PUT {{baseUrl}}/api/categorias/atualizar/{id}
+Content-Type: application/json
+
+{
+  "nome": "categoria atualizada"
+}
+
+### Remover categoria
+DELETE {{baseUrl}}/api/categorias/remover/{id}
