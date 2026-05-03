@@ -18,3 +18,8 @@ obj/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Banco de dados
+*.db
+*.db-shm
+*.db-wal
