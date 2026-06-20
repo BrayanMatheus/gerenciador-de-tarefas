@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar";
 import ListaUsuarios from "./pages/usuarios/ListaUsuarios";
 import CadastrarUsuario from "./pages/usuarios/CadastrarUsuario";
 import EditarUsuario from "./pages/usuarios/EditarUsuario";
@@ -10,6 +11,7 @@ import EditarCategoria from "./pages/categorias/EditarCategoria";
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/usuarios" element={<ListaUsuarios />} />
         <Route path="/usuarios/cadastrar" element={<CadastrarUsuario />} />
