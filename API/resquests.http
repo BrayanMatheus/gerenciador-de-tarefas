@@ -10,23 +10,23 @@ POST {{baseUrl}}/api/usuarios/cadastrar
 Content-Type: application/json
 
 {
-  "nome": "Brayan Matheus",
-  "email": "brayan@email.com"
+  "nome": "usuario teste",
+  "email": "usuario@email.com"
 }
 
 ### Listar todos os usuários
 GET {{baseUrl}}/api/usuarios/listar
 
 ### Listar usuário por ID
-GET {{baseUrl}}/api/usuarios/4
+GET {{baseUrl}}/api/usuarios/{id}
 
 ### Atualizar usuário por id
-PUT {{baseUrl}}/api/usuarios/atualizar/4
+PUT {{baseUrl}}/api/usuarios/atualizar/{id}
 Content-Type: application/json
 
 {
-  "nome": "Brayan Atualizado",
-  "email": "brayannovo@email.com"
+  "nome": "usuario atualizado",
+  "email": "atualizado@email.com"
 }
 
 ### Remover usuário
@@ -54,7 +54,7 @@ PUT {{baseUrl}}/api/categorias/atualizar/{id}
 Content-Type: application/json
 
 {
-  "nome": "Urgência"
+  "nome": "Trabalho"
 }
 
 ### Remover categoria
@@ -67,11 +67,11 @@ POST {{baseUrl}}/api/tarefas/cadastrar
 Content-Type: application/json
 
 {
-  "titulo": "Fazer exames",
-  "descricao": "Realizar exames médicos",
-  "concluida": true,
-  "usuarioId": 2,
-  "categoriaId": 5
+  "titulo": "Visitar lojas",
+  "descricao": "Visitar lojas do grupo",
+  "concluida": false,
+  "usuarioId": 5,
+  "categoriaId": 6
 }
 
 ### Listar todas as tarefas
@@ -85,10 +85,10 @@ PUT {{baseUrl}}/api/tarefas/atualizar/{id}
 Content-Type: application/json
 
 {
-  "titulo": "Fazer exames",
-  "descricao": "Realizar exames médicos",
+  "titulo": "Fazer exames médicos",
+  "descricao": "Realizar exames médicos o mais rápido possivel",
   "concluida": true,
-  "usuarioId": 5,
+  "usuarioId": 1,
   "categoriaId": 5
 }
 
