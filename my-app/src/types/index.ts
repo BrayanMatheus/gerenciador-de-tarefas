@@ -1,7 +1,22 @@
-import axios from "axios";
+export interface Usuario {
+  id: number;
+  nome: string;
+  email: string;
+}
 
-const api = axios.create({
-    baseURL: "http://localhost:5028"
-});
+export interface Categoria {
+  id: number;
+  nome: string;
+}
 
-export default api;
+export interface TaskItem {
+  id: number;
+  titulo: string;
+  descricao: string;
+  concluida: boolean;
+  criadoEm: string;
+  usuarioId: number;
+  categoriaId: number;
+  usuario?: Usuario;
+  categoria?: Categoria;
+}

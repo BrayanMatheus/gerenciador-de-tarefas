@@ -3,13 +3,23 @@ using API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
 builder.Services.AddDbContext<AppDataContext>();
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(opt =>
 {
     opt.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
+
+
 var app = builder.Build();
+
+app.UseCors(options =>
+    options.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+);
 
 // RAIZ da API
 // GET: /api
