@@ -23,7 +23,7 @@ function App() {
         <Route path="/categorias/cadastrar" element={<CadastrarCategoria />} />
         <Route path="/categorias/editar/:id" element={<EditarCategoria />} />
         <Route path="/tarefas" element={<ListaTarefas />} />
-        <Route path="/tarefas" element={<CadastrarTarefa />} />
+        <Route path="/tarefas/cadastrar" element={<CadastrarTarefa />} />
         <Route path="/tarefas/editar/:id" element={<EditarTarefa />} />
       </Routes>
     </BrowserRouter>
