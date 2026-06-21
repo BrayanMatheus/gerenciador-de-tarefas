@@ -7,6 +7,7 @@ import EditarUsuario from "./pages/usuarios/EditarUsuario";
 import ListaCategorias from "./pages/categorias/ListaCategorias";
 import CadastrarCategoria from "./pages/categorias/CadastrarCategoria";
 import EditarCategoria from "./pages/categorias/EditarCategoria";
+import ListaTarefas from "./pages/tarefas/ListaTarefas";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/categorias" element={<ListaCategorias />} />
         <Route path="/categorias/cadastrar" element={<CadastrarCategoria />} />
         <Route path="/categorias/editar/:id" element={<EditarCategoria />} />
+        <Route path="/tarefas" element={<ListaTarefas />} />
       </Routes>
     </BrowserRouter>
   );
